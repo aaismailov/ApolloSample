@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.apollographql.apollo3'
 }
 
 android {
@@ -32,6 +33,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+        useIR = true
     }
     buildFeatures {
         compose true
@@ -60,4 +62,15 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+
+    implementation "com.apollographql.apollo3:apollo-runtime:3.7.0"
+
+    implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.6.0-alpha01'
+
+
+}
+
+apollo {
+    packageName.set("com.example.apollosample")
 }
