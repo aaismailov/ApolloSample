@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ApolloSample</string>
+    <string name="on_error_def">Произошла непредвиденная ошибка</string>
 </resources>
